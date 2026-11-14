@@ -1,0 +1,74 @@
+/* The look: newsprint, ink and comic-book colours. The model's own styles read
+   these tokens (see .sm-tool in src/routes/+page.svelte). System fonts only, so
+   the page never loads anything from another site. Text contrast is 5:1 or more. */
+:root {
+	--ink: #141114;
+	--paper: #efe7d6;
+	--paper-2: #e2d6bd;
+	--pink: #ff2d87;
+	--pink-ink: #b8004f;
+	--pink-lit: #ff5aa5;
+	--gold: #f2c230;
+	--cyan: #2fd4e6;
+	--bw: 3px;
+	--tilt: 1;
+	--poster: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'Arial Narrow', sans-serif;
+	--type: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+	--body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+	--color-bg-primary: #f7f1e4;
+	--color-bg-secondary: var(--paper);
+	--color-bg-tertiary: var(--paper-2);
+	--color-text-primary: var(--ink);
+	--color-text-secondary: #2f2a2c;
+	--color-text-tertiary: #4d4545;
+	--color-border: var(--ink);
+	--color-accent-primary: var(--pink-ink);
+	--color-danger: #a8180c;
+	--color-success: #1d6b34;
+	--color-warning: #7a4f00;
+
+	color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--body);
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--poster);
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	line-height: 1.05;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+:focus-visible {
+	outline: 3px solid var(--pink-ink);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+	}
+}

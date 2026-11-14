@@ -1,0 +1,36 @@
+{
+	"name": "startup-model",
+	"version": "0.1.0",
+	"description": "Plan pay, ownership, back-pay and cash flow for a founding team, phase by phase. Runs in your browser; nothing is sent anywhere.",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"homepage": "https://idunworks.com/projects?utm_source=github&utm_medium=package&utm_campaign=startup-model",
+	"engines": {
+		"node": ">=22"
+	},
+	"packageManager": "pnpm@9.15.9",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.60.1",
+		"@sveltejs/vite-plugin-svelte": "^5.1.1",
+		"svelte": "^5.55.7",
+		"svelte-check": "^4.4.5",
+		"typescript": "^5.9.3",
+		"vite": "^6.4.2",
+		"vitest": "^4.1.12"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	}
+}
